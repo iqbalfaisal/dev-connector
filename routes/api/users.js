@@ -68,11 +68,12 @@ router.post(
         { expiresIn: 360000 },
         (err, token) => {
           if (err) throw err;
+          console.log(token);
           res.json({ token });
         }
       );
 
-      res.send("User Register");
+      // res.send("User Register");
     } catch (err) {
       console.error(err.message);
     }
